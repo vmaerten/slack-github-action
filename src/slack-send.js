@@ -55,6 +55,7 @@ module.exports = async function slackSend(core) {
         // confirm it is valid json
         payload = JSON.parse(payload);
       } catch (e) {
+	console.log(payload);
         // passed in payload wasn't valid json
         console.error('passed in payload was invalid JSON');
         throw new Error('Need to provide valid JSON payload');
